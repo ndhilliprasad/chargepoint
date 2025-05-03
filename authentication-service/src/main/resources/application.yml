@@ -1,0 +1,17 @@
+spring:
+  webflux:
+    base-path: /authentication
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+server:
+  port: 7002
+
+kafka:
+  bootstrap-servers: kafka:29092
+  consumer:
+    topic: request-topic
+    group-id: authentication-service
+  producer:
+    topic: response-topic
+

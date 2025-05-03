@@ -1,0 +1,17 @@
+spring:
+  webflux:
+    base-path: /transaction
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+server:
+  port: 7001
+
+kafka:
+  bootstrap-servers: kafka:29092
+  consumer:
+    topic: response-topic
+    group-id: transaction-service
+  producer:
+    topic: request-topic
+
