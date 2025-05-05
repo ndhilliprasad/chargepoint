@@ -24,6 +24,9 @@ class KafkaConfiguration {
     @Value("\${kafka.consumer.topic}")
     private lateinit var consumerTopic: String
 
+    @Value("\${kafka.producer.topic}")
+     lateinit var producerTopic: String
+
     fun producerConfig(): Map<String, Any> {
         return mapOf(
             ProducerConfig.BOOTSTRAP_SERVERS_CONFIG to bootstrapServers,

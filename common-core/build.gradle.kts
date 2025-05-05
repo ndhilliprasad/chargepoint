@@ -13,6 +13,7 @@ tasks.getByName<Jar>("bootJar") {
 tasks.test {
     useJUnitPlatform()
 }
+
 kotlin {
     jvmToolchain(21)
 }

@@ -5,6 +5,12 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+
+    doFirst {
+        layout.buildDirectory.dir("tmp").get().asFile.mkdirs()
+    }
+
+    systemProperty("java.io.tmpdir", layout.buildDirectory.dir("tmp").get().asFile.absolutePath)
 }
 
 kotlin {

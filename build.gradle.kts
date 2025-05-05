@@ -30,8 +30,16 @@ subprojects {
     dependencies {
         implementation("org.springframework.boot:spring-boot-starter-webflux")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-        implementation("org.springframework.kafka:spring-kafka")
+        //implementation("org.springframework.kafka:spring-kafka")
         implementation("io.projectreactor.kafka:reactor-kafka")
+
+        testImplementation("org.springframework.kafka:spring-kafka-test")
+        testImplementation("org.springframework.boot:spring-boot-starter-test") {
+            exclude(module = "junit")
+        }
+        testImplementation("io.projectreactor:reactor-test")
+        testImplementation("io.mockk:mockk:1.13.8")
+        testImplementation("com.ninja-squad:springmockk:4.0.2")
 
         testImplementation(kotlin("test"))
     }

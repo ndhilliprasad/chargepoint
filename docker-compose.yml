@@ -41,7 +41,7 @@ services:
       "
 
   authentication-service:
-    image: authentication-service:1.0
+    image: authentication-service:1.2
     container_name: authentication-service
     depends_on:
       kafka:
@@ -50,7 +50,7 @@ services:
         - "7002:7002"
 
   transaction-service:
-    image: transaction-service:1.0
+    image: transaction-service:1.2
     container_name: transaction-service
     depends_on:
       kafka:
