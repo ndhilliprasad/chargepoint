@@ -26,7 +26,7 @@ chmod +x start-script.sh
 ```
 docker-compose.yml has zookeeper, kafka, transaction-service and authentication-service
 
-Application dockers will take sometime startup as it is kafka to be in a healthy state
+Application dockers will take about 30s~1min as it is kafka to be in a healthy state
 
 Curl to test the APIs
 
